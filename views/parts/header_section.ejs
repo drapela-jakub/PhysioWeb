@@ -1,0 +1,138 @@
+<style> 
+  :root {
+    --bg-light-green: #62d2a2;
+    --bg-dark-green: #178066;
+  }
+  .bg-light-green {
+    background-color: var(--bg-light-green);
+  }
+  .bg-dark-green {
+    background-color: var(--bg-dark-green);
+  }
+  #reservation_btn a {
+      display: flex;
+      padding: 5px 30px;
+      background-color: var(--bg-light-green);
+      color: #ffffff;
+      border-radius: 5px;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      border: 1px solid var(--bg-light-green);
+      text-transform: uppercase;
+  }
+  #contactModal .img_box {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    background-color: var(--bg-light-green);
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  #contactModal .img_box i {
+    font-size: 30px;
+    color: white;
+  }
+  #contactModal span {
+    font-size: 30px;
+    color: white;
+    align-content: space-evenly;
+  }
+  #contactModal .modal-content {
+    background-color: var(--bg-dark-green);
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+  }
+  #contactModal .modal-body {
+    background-color: var(--bg-dark-green);
+    border-bottom-left-radius: 4.8px !important;
+    border-bottom-right-radius: 4.8px !important;
+  }
+  #contactModal .modal-header {
+    background-color: var(--bg-light-green);
+  }
+</style>
+
+<!-- header section strats -->
+<header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="/">
+          <span>
+            SOS Fyzio
+          </span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="about">O mně</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services">Služby</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="prices">Ceník</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Kontakt</a>
+            </li>
+            <li class="nav-item">
+              <div id="reservation_btn" class="btn-box">
+                <a data-toggle="modal" data-target="#contactModal">
+                  Rezervace
+                </a>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+<!-- Modal Structure -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-5">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel"><span class="h4">Rezervace</span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row mb-1">
+          <div class="col-12 d-flex align-items-center">
+            <a href="tel:721488035" class="d-flex align-items-center">
+              <div class="img_box">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              </div>
+              <span class="h4">721 488 035</span>
+            </a>
+          </div>
+          <div class="col-12 d-flex align-items-center">
+            <a href="mailto:info@sosfyzio.cz" class="d-flex align-items-center">
+              <div class="img_box">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </div>
+              <span class="h4">info@sosfyzio.cz</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
